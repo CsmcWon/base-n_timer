@@ -405,9 +405,9 @@
 
   function updateNBaseDisplay() {
     const base = getBase();
-    document.getElementById('label-digit2').innerText = `3桁目 (${Math.pow(base, 2)}秒)`;
-    document.getElementById('label-digit1').innerText = `2桁目 (${base}秒)`;
-    document.getElementById('label-digit0').innerText = `3桁目 (1秒)`;
+    document.getElementById('label-digit2').innerText = `3桁目 ${Math.pow(base, 2)}秒`;
+    document.getElementById('label-digit1').innerText = `2桁目 ${base}秒`;
+    document.getElementById('label-digit0').innerText = `3桁目 1秒`;
 
     let val = nbaseSeconds;
     let d0 = val % base; val = Math.floor(val / base);
