@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>N進法 & インターバルタイマー</title>
+  <title>base-N timer</title>
   <style>
     :root {
       --bg-color: #0f172a;
@@ -96,7 +96,7 @@
     }
 
     .card-label {
-      font-size: 0.50em;
+      font-size: 0.60rem;
       color: var(--text-dim);
       margin-bottom: 5px;
     }
@@ -405,9 +405,9 @@
 
   function updateNBaseDisplay() {
     const base = getBase();
-    document.getElementById('label-digit2').innerText = `3桁目 ${Math.pow(base, 2)}秒`;
-    document.getElementById('label-digit1').innerText = `2桁目 ${base}秒`;
-    document.getElementById('label-digit0').innerText = `3桁目 1秒`;
+    document.getElementById('label-digit2').innerText = `3桁目 (${Math.pow(base, 2)}秒)`;
+    document.getElementById('label-digit1').innerText = `2桁目 (${base}秒)`;
+    document.getElementById('label-digit0').innerText = `3桁目 (1秒)`;
 
     let val = nbaseSeconds;
     let d0 = val % base; val = Math.floor(val / base);
